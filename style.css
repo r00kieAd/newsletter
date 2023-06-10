@@ -1,10 +1,55 @@
+
+
 .mainheader {
     margin: 0;
     padding: 0;
+    background-color: hsl(4, 100%, 67%);
+    border: 1px solid hsl(4, 100%, 67%);
+    border-radius: 0px 0px 20px 20px;
 }
 
 .svgimg {
     display: block;
     padding: 0;
     margin: 0;
+}
+
+.stayUpdated {
+    padding: 20px;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5rem;
+}
+
+.points {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputEmail {
+    width: 100px;
+}
+
+.subscribe {
+    padding: 0px 20px;
+}
+
+.butt {
+    text-align: center;
+}
+
+.butt button {
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    padding: 7px 50px;
+    border-radius: 5px;
 }
