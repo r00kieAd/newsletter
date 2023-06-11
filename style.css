@@ -10,6 +10,12 @@
     border-radius: 0px 0px 20px 20px;
 } */
 
+.svgimg {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
 .stayUpdated h1 {
     font-weight: 700;
 }
@@ -19,11 +25,6 @@
     font-size: 16px;
 }
 
-.svgimg {
-    display: block;
-    padding: 0;
-    margin: 0;
-}
 
 .stayUpdated {
     padding: 20px;
