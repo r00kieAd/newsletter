@@ -1,11 +1,22 @@
+.main {
+    font-family: 'Roboto', sans-serif;
+}
 
-
-.mainheader {
+/* .mainheader {
     margin: 0;
-    padding: 0;
+    padding: 0 0 15px 0;
     background-color: hsl(4, 100%, 67%);
     border: 1px solid hsl(4, 100%, 67%);
     border-radius: 0px 0px 20px 20px;
+} */
+
+.stayUpdated h1 {
+    font-weight: 700;
+}
+
+.stayUpdated p, .point p {
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .svgimg {
@@ -37,10 +48,35 @@
 
 .inputEmail {
     width: 100px;
+    border-color: hsl(231, 7%, 60%) !important;
+    box-shadow: none !important;
+}
+
+.inputEmailII {
+    width: 100px;
+    border-color: black !important;
+    box-shadow: none !important;
+}
+
+.inputEmailIII[type='email'] {
+    width: 100%;
+    border-color: red !important;
+    background-color: #F8C4B4 !important;
+    box-shadow: none !important;
+    color: hsl(4, 100%, 67%);
+}
+
+.errorMsg {
+    display:block;
+    float: right;
+    color: red;
+    font-size: 10px;
+    margin: 2px 2px 0 0;
+    visibility: hidden;
 }
 
 .subscribe {
-    padding: 0px 20px;
+    padding: 0px 25px;
 }
 
 .butt {
@@ -49,7 +85,8 @@
 
 .butt button {
     background-color: hsl(234, 29%, 20%);
+    font-size: 15px;
     color: white;
     padding: 7px 50px;
-    border-radius: 5px;
+    border-radius: 7px;
 }
