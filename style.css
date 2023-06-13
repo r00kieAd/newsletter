@@ -171,6 +171,6 @@
 
 @media screen and (min-width: 1550px) {
     .main {
-        width: none !important;
+        width: 50%;
     }
 }
