@@ -18,7 +18,7 @@
 
     <div class="main">
         <div class="mainheader">
-            <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            <svg class="svgImg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 width="375" height="284" viewBox="0 0 375 284">
                 <defs>
                     <linearGradient id="b" x1="100%" x2="0%" y1="21.322%" y2="78.678%">
@@ -152,60 +152,66 @@
                 </g>
             </svg>
         </div>
-        <div class="stayUpdated">
-            <h1>Stay Updated!</h1>
-            <p>Join 60,000+ product managers receiving monthly updateds on:</p>
-            <div class="features">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-                        <g fill="none">
-                            <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-                            <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
-                        </g>
-                    </svg>
-                </div>
-                <div class="points">
-                    <p>Product discovery and building what matters</p>
-                </div>
-            </div>
-            <div class="features">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-                        <g fill="none">
-                            <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-                            <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
-                        </g>
-                    </svg>
-                </div>
-                <div class="points">
-                    <p>Measuring to ensure updates are a success</p>
-                </div>
-            </div>
-            <div class="features">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-                        <g fill="none">
-                            <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-                            <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
-                        </g>
-                    </svg>
-                </div>
-                <div class="points">
-                    <p>And much more!</p>
-                </div>
-            </div>
+        <div class="mainheader">
+            <img class="Dimg" src="images/desktop-view.png" alt="">
         </div>
-        <div class="subscribe">
-            <div class="mb-3">
-                <label for="emailInput" class="form-label lbl">Email address</label>
-                <p class="errorMsg">Valid email required</p>
-                <input onmouseover="highlightBox(1, this)" onmouseleave="highlightBox(0, this)" onkeypress="enterKey(event)" type="email"
-                    class="form-control inputEmail" id="emailInput" placeholder="email@company.com">
+        <div class="desktop-view">
+            <div class="stayUpdated">
+                <h1>Stay Updated!</h1>
+                <p>Join 60,000+ product managers receiving monthly updateds on:</p>
+                <div class="features">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                            <g fill="none">
+                                <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                                <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="points">
+                        <p>Product discovery and building what matters</p>
+                    </div>
+                </div>
+                <div class="features">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                            <g fill="none">
+                                <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                                <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="points">
+                        <p>Measuring to ensure updates are a success</p>
+                    </div>
+                </div>
+                <div class="features">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                            <g fill="none">
+                                <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                                <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="points">
+                        <p>And much more!</p>
+                    </div>
+                </div>
             </div>
-            <div class="butt">
-                <button onclick="subscribe()" onmouseover="changeColor(1, this)"
-                    onmouseleave="changeColor(0, this)">Subscribe
-                    to monthly Newsletter</button>
+            <div class="subscribe">
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label lbl">Email address</label>
+                    <p class="errorMsg">Valid email required</p>
+                    <input onmouseover="highlightBox(1, this)" onmouseleave="highlightBox(0, this)"
+                        onkeypress="enterKey(event)" type="email" class="form-control inputEmail" id="emailInput"
+                        placeholder="email@company.com">
+                </div>
+                <div class="butt">
+                    <button onclick="subscribe()" onmouseover="changeColor(1, this)"
+                        onmouseleave="changeColor(0, this)">Subscribe
+                        to monthly Newsletter</button>
+                </div>
             </div>
         </div>
     </div>
