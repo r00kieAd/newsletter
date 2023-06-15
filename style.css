@@ -1,9 +1,15 @@
 .main {
+    width: 100%;
     font-family: 'Roboto', sans-serif;
+    top: none;
+    left: none;
+    transform: none;
+    padding: none;
 }
 
 .svgImg {
     position: relative;
+    visibility: visible;
     width: 100%;
     height: auto;
 }
@@ -100,6 +106,13 @@
         overflow: hidden;
     }
 
+    .main {
+        display: flex;
+        flex-wrap: nowrap;
+        width: fit-content;
+        font-family: 'Roboto', sans-serif;
+    }
+
     .svgImg {
         position: fixed;
         visibility: hidden;
@@ -142,6 +155,10 @@
         position: relative;
         display: inline;
         float: left;
+    }
+
+    .subscribe {
+        padding: 0px 25px;
     }
 
     .inputEmail {

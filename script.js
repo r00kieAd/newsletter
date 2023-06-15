@@ -1,15 +1,23 @@
-function highlightBox(j, f){
-    if (j == 1){
+if (screen.width > 500) {
+    document.querySelector(".Dimg").src = "images/desktop-view.png";
+}
+
+if (screen.width > 1550) {
+    document.querySelector(".main").style.width = "none";
+}
+
+function highlightBox(j, f) {
+    if (j == 1) {
         f.classList.remove("inputEmail");
         f.classList.add("inputEmailII");
-    }else{
+    } else {
         f.classList.add("inputEmail");
         f.classList.remove("inputEmailII");
     }
 }
 
 function enterKey(event) {
-    if (event.keyCode === 13){
+    if (event.keyCode === 13) {
         subscribe();
         return;
     }
@@ -29,6 +37,11 @@ function subscribe() {
         e.classList.add("inputEmailIII");
         document.querySelector(".errorMsg").style.visibility = "visible";
     }
+}
+
+function showEmail(e) {
+    alert(document.getElementById("email").innerHTML);
+    document.getElementById("email").innerHTML = e.value;
 }
 
 function dismiss() {
