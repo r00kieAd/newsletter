@@ -191,3 +191,9 @@
         width: 50%;
     }
 }
+
+@media screen and (min-width: 500px) and (max-width: 1665px) {
+    .butt button {
+        font-size: small;
+    }
+}
