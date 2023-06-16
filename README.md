@@ -24,7 +24,7 @@ This project was provided by Frontend Mentor and developed by Adhyatma Dwivedi.
 
 ![Mobile Homepage](images/mobileHomepage.png)
 
-![Desktop Success](images/desktopSuccess.png)
+![Desktop Success](images/DesktopSuccess.png)
 
 ![Mobile Success](images/mobileSuccess.png)
 
