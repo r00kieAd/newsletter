@@ -39,19 +39,56 @@
             <br>
             <form name="form1" action="thankyoupage.html" method="get">
                 <p>
-                    A confirmation email has been sent to <strong id="email">email@company.com</strong>. Please open it
+                    A confirmation email has been sent to <strong id="displayEmail">email@company.com</strong>.
+                    Please open it
                     and
                     click the
                     button inside to confirm
                     your subscription.</p>
-                </p>
             </form>
         </div>
         <div class="dismissButt">
             <button onclick="dismiss()" onmouseover="changeColor(1, this)" onmouseleave="changeColor(0, this)">Dismiss
                 message</button>
         </div>
+
+        <div class="desktop-view" style="visibility: hidden;">
+            <div class="card myCard" style="width: 18rem;">
+                <img src="images/icon-success.svg" class="card-img-top" alt="..."
+                    style="width: 50px; height: auto; margin-left: 1rem;">
+                <div class="card-body">
+                    <h1 class="card-title">Thanks for Subscribing!</h1>
+                    <br>
+                    <p class="card-text">A confirmation email has been sent to <strong
+                            id="displayEmail">email@company.com</strong>.
+                        Please open it
+                        and
+                        click the
+                        button inside to confirm
+                        your subscription.</p>
+                        <br>
+                    <button class="Dismiss" onclick="dismiss()" onmouseover="changeColor(1, this)"
+                        onmouseleave="changeColor(0, this)">Dismiss
+                        message</button>
+                </div>
+            </div>
+        </div>
+
     </div>
+    <script>
+        function getURLParameter(emailInput) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(emailInput);
+        }
+
+        var emailValue = getURLParameter("emailInput");
+        if (screen.width > 500){
+            var displayElement = document.querySelector(".card-text > #displayEmail");
+        }else{
+            var displayElement = document.getElementById("displayEmail");
+        }
+        displayElement.innerHTML = emailValue;
+    </script>
     <script src="script.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

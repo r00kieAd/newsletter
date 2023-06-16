@@ -17,31 +17,27 @@ function highlightBox(j, f) {
 }
 
 function enterKey(event) {
-    if (event.keyCode === 13) {
-        subscribe();
-        return;
+    if (event.key === "Enter") {
+        event.preventDefault();
+        return false;
     }
 }
 
 function subscribe() {
     const e = document.querySelector("#emailInput");
-    let email = e.value;
+    let emailInput = e.value;
     const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const emailIsCorrect = emailFormat.test(email);
+    const emailIsCorrect = emailFormat.test(emailInput);
     if (emailIsCorrect) {
         e.classList.remove("inputEmailIII");
         e.classList.add("inputEmail");
-        window.location.href = 'thankyoupage.html';
+        var url = "thankyoupage.html?emailInput=" + encodeURIComponent(emailInput);
+        window.location.href = url;
     } else {
         e.classList.remove("inputEmail");
         e.classList.add("inputEmailIII");
         document.querySelector(".errorMsg").style.visibility = "visible";
     }
-}
-
-function showEmail(e) {
-    alert(document.getElementById("email").innerHTML);
-    document.getElementById("email").innerHTML = e.value;
 }
 
 function dismiss() {
