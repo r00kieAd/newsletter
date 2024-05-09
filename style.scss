@@ -1,0 +1,86 @@
+$darkSlateGrey: hsl(234, 29%, 20%);
+$charcoalGrey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$tomato: hsl(4, 100%, 67%);
+$baseFontSize: clamp(10px, 15px, 18px);
+
+@font-face {
+    font-family: 'Roboto-regular';
+    src: url('assets/fonts/Roboto-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url('assets/fonts/Roboto-Bold.ttf') format('ttf');
+}
+
+body {
+    background: $darkSlateGrey;
+    font-family: 'Roboto-regular', sans-serif;
+    font-size: $baseFontSize;
+    font-weight: 400;
+}
+
+#main {
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+    border: 1px solid black;
+}
+
+.col {
+    width: auto !important;
+    height: auto !important;
+    justify-content: space-between !important;
+}
+
+#content {
+    position: relative;
+    margin: 1rem;
+}
+
+.heading {
+    font-family: 'Roboto-bold', sans-serif;
+    font-weight: 600;
+    color: $charcoalGrey;
+    font-size: clamp(15px, 35px, 45px);
+}
+
+.points {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 28px;
+}
+
+.points li {
+    padding-left: 1.8rem;
+    background-image: url(images/icon-list.svg);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 0 50%;
+}
+
+.contactInfo {
+    margin: 1rem 0;
+}
+
+.contactInfo > label, .contactInfo > input {
+    margin-bottom: 5px;
+}
+
+.contactInfo > label {
+    font-family: 'Roboto-bold', sans-serif;
+    font-weight: 600;
+    font-size: calc($baseFontSize - 5px);
+}
+
+.logo {
+    background: url(images/illustration-sign-up-desktop.svg);
+    background-size: cover;
+    background-position: center;
+    width: 21rem;
+    height: 100%;
+}
