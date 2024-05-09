@@ -5,6 +5,9 @@ $tomato: hsl(4, 100%, 67%);
 $baseFontSize: clamp(10px, 15px, 18px);
 $mainDivWidth: 45rem;
 $mainDivHeight: clamp(20rem, 26rem, 30rem);
+$contentDivWidth: calc($mainDivWidth - calc($mainDivWidth * 0.50));
+$logoDivWidth: calc($mainDivWidth - calc($mainDivWidth * 0.62));
+$baseBorderRadius: 10px;
 
 @font-face {
     font-family: 'Roboto-regular';
@@ -32,19 +35,23 @@ body {
     width: $mainDivWidth;
     height: $mainDivHeight;
     border: 1px solid black;
-    padding: .7rem;
+    border-radius: $baseBorderRadius;
+    padding: .7rem 0;
 }
 
-.col {
-    width: auto !important;
-    height: auto !important;
+.custCol {
+    position: relative !important;
+    margin: 0 !important;
     justify-content: space-between !important;
 }
 
 #content {
-    position: relative;
-    margin: 1rem;
-    width: calc($mainDivWidth - 22.5rem);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $contentDivWidth;
+    max-width: $contentDivWidth;
 }
 
 .heading {
@@ -82,13 +89,20 @@ body {
     font-size: calc($baseFontSize - 5px);
 }
 
+.logoDiv {
+    position: relative !important;
+    max-width: $logoDivWidth !important;
+    // border: 1px solid black;
+}
+
 .logo {
     position: relative;
-    float: inline-end;
+    float: right;
     background: url(images/illustration-sign-up-desktop.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: calc($mainDivWidth - 30rem);
+    width: $logoDivWidth;
     height: calc($mainDivHeight - 1.5rem);
+    border-radius: $baseBorderRadius;
 }
