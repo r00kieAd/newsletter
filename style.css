@@ -7,9 +7,9 @@
   src: url("assets/fonts/Roboto-Bold.ttf") format("ttf");
 }
 body {
-  background: hsl(234, 29%, 20%);
+  background: hsl(235, 18%, 26%);
   font-family: "Roboto-regular", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -19,16 +19,17 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 45rem;
-  height: 26rem;
+  width: 44rem;
+  height: auto;
   border: 1px solid black;
-  border-radius: 10px;
-  padding: 0.7rem 0;
+  border-radius: 20px;
+  padding: 1rem;
 }
 
 .custCol {
   position: relative !important;
   margin: 0 !important;
+  padding: 0 !important;
   justify-content: space-between !important;
 }
 
@@ -37,21 +38,28 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 22.5rem;
-  max-width: 22.5rem;
+  width: 19.8rem;
+  max-width: 19.8rem;
+}
+
+.mainHeading {
+  width: 100%;
 }
 
 .heading {
   font-family: "Roboto-bold", sans-serif;
   font-weight: 600;
   color: hsl(235, 18%, 26%);
-  font-size: 35px;
+  font-size: 43px;
+  margin-top: 5px;
+  margin-bottom: 14px;
+  word-spacing: 1px;
 }
 
 .points {
   list-style-type: none;
   padding-left: 0;
-  line-height: 28px;
+  line-height: 25px;
 }
 
 .points li {
@@ -62,33 +70,72 @@ body {
   background-position: 0 50%;
 }
 
-.contactInfo {
-  margin: 1rem 0;
-}
-
 .contactInfo > label, .contactInfo > input {
   margin-bottom: 5px;
 }
 
-.contactInfo > label {
+.labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.mainLabel, .errorLabel {
   font-family: "Roboto-bold", sans-serif;
   font-weight: 600;
   font-size: 10px;
+  color: hsl(234, 29%, 20%);
+}
+
+.errorLabel {
+  color: hsl(4, 100%, 67%);
+  visibility: hidden;
+}
+
+.contactInfo > input, .contactInfo > button {
+  width: 100%;
+  height: 40px;
+  line-height: 30px;
+  padding: 10px;
+  font-family: "Roboto-regular", sans-serif;
+  font-size: 12.5px;
+  outline: none;
+  border: 0.5px solid hsl(231, 7%, 60%);
+  border-radius: 5px;
+  color: hsl(234, 29%, 20%);
+}
+
+.contactInfo > input:focus {
+  outline: none;
+  border-color: hsl(234, 29%, 20%);
+}
+
+.contactInfo > button {
+  line-height: normal;
+  padding: 0;
+  font-weight: 500;
+  margin-top: 10px;
+  background: hsl(234, 29%, 20%);
+  color: white;
+}
+
+.contactInfo > button:hover {
+  background: hsl(4, 100%, 67%);
+  color: white;
+  border-color: hsl(4, 100%, 67%);
+  box-shadow: 0 3px 10px hsl(4, 100%, 67%);
 }
 
 .logoDiv {
   position: relative !important;
-  max-width: 17.1rem !important;
+  max-width: 17.6rem !important;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 
 .logo {
-  position: relative;
-  float: right;
-  background: url(images/illustration-sign-up-desktop.svg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 17.1rem;
-  height: 24.5rem;
-  border-radius: 10px;
+  width: 17.6rem;
+  height: auto;
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */

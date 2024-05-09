@@ -29,14 +29,17 @@
               </ul>
             </div>
             <div class="contactInfo">
-              <label for="emailInput">Email address</label><br>
-              <input type="text" name="emailInput" id="emailInput" placeholder="email@company.com"><br>
+              <div class="labels">
+                <label class="mainLabel" for="emailInput">Email address</label>
+                <label class="errorLabel" for="emailInput">Valid email required</label>
+              </div>
+              <input type="email" name="emailInput" id="emailInput" placeholder="email@company.com"><br>
               <button type="submit">Subscribe to monthly newsletter</button>
             </div>
           </div>
         </div>
         <div class="col custCol logoDiv">
-          <div class="logo">&nbsp;</div>
+          <div class="logo"><img class="img-fluid" src="images/illustration-sign-up-desktop.svg" alt=""></div>
         </div>
       </div>
     </div>
