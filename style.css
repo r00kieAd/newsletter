@@ -19,8 +19,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50rem;
+  width: 45rem;
+  height: 26rem;
   border: 1px solid black;
+  padding: 0.7rem;
 }
 
 .col {
@@ -32,6 +34,7 @@ body {
 #content {
   position: relative;
   margin: 1rem;
+  width: 22.5rem;
 }
 
 .heading {
@@ -70,9 +73,12 @@ body {
 }
 
 .logo {
+  position: relative;
+  float: inline-end;
   background: url(images/illustration-sign-up-desktop.svg);
   background-size: cover;
   background-position: center;
-  width: 21rem;
-  height: 100%;
+  background-repeat: no-repeat;
+  width: 15rem;
+  height: 24.5rem;
 }/*# sourceMappingURL=style.css.map */

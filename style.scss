@@ -3,6 +3,8 @@ $charcoalGrey: hsl(235, 18%, 26%);
 $grey: hsl(231, 7%, 60%);
 $tomato: hsl(4, 100%, 67%);
 $baseFontSize: clamp(10px, 15px, 18px);
+$mainDivWidth: 45rem;
+$mainDivHeight: clamp(20rem, 26rem, 30rem);
 
 @font-face {
     font-family: 'Roboto-regular';
@@ -27,8 +29,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50rem;
+    width: $mainDivWidth;
+    height: $mainDivHeight;
     border: 1px solid black;
+    padding: .7rem;
 }
 
 .col {
@@ -40,13 +44,14 @@ body {
 #content {
     position: relative;
     margin: 1rem;
+    width: calc($mainDivWidth - 22.5rem);
 }
 
 .heading {
     font-family: 'Roboto-bold', sans-serif;
     font-weight: 600;
     color: $charcoalGrey;
-    font-size: clamp(15px, 35px, 45px);
+    font-size: calc($baseFontSize + 20px);
 }
 
 .points {
@@ -78,9 +83,12 @@ body {
 }
 
 .logo {
+    position: relative;
+    float: inline-end;
     background: url(images/illustration-sign-up-desktop.svg);
     background-size: cover;
     background-position: center;
-    width: 21rem;
-    height: 100%;
+    background-repeat: no-repeat;
+    width: calc($mainDivWidth - 30rem);
+    height: calc($mainDivHeight - 1.5rem);
 }
