@@ -70,30 +70,26 @@ body {
   background-position: 0 50%;
 }
 
-.contactInfo > label, .contactInfo > input {
-  margin-bottom: 5px;
-}
-
-.labels {
+.contactInfo .labels {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 5px;
 }
-
-.mainLabel, .errorLabel {
+.contactInfo .labels .mainLabel,
+.contactInfo .labels .errorLabel {
   font-family: "Roboto-bold", sans-serif;
   font-weight: 600;
   font-size: 10px;
   color: hsl(234, 29%, 20%);
 }
-
-.errorLabel {
+.contactInfo .labels .errorLabel {
   color: hsl(4, 100%, 67%);
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
 }
-
-.contactInfo > input, .contactInfo > button {
+.contactInfo input,
+.contactInfo button {
   width: 100%;
   height: 40px;
   line-height: 30px;
@@ -105,22 +101,24 @@ body {
   border-radius: 5px;
   color: hsl(234, 29%, 20%);
 }
-
-.contactInfo > input:focus {
+.contactInfo input {
+  transition: border-color 0.2s ease-in, background 0.2s ease-in;
+  margin-bottom: 5px;
+}
+.contactInfo input:focus {
   outline: none;
   border-color: hsl(234, 29%, 20%);
 }
-
-.contactInfo > button {
+.contactInfo button {
   line-height: normal;
   padding: 0;
   font-weight: 500;
   margin-top: 10px;
   background: hsl(234, 29%, 20%);
   color: white;
+  transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-
-.contactInfo > button:hover {
+.contactInfo button:hover {
   background: hsl(4, 100%, 67%);
   color: white;
   border-color: hsl(4, 100%, 67%);
