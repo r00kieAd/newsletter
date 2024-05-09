@@ -1,6 +1,6 @@
-# Frontend Mentor - Newsletter sign-up form with success message solution
+# Frontend Mentor - Newsletter sign-up form with success message
 
-This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Newsletter sign-up form with success message](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv) challenge from Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -17,6 +17,8 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 Newsletter webpage template where using enter a valid email and get a subsribtion success message. Users will be able to get different screens for mobile and desktop.
 This project was provided by Frontend Mentor and developed by Adhyatma Dwivedi.
+
+<strong>Re-coding from scrath to improve the structure and optimize the code.</strong>
 
 ### Screenshot
 
@@ -55,4 +57,4 @@ This project was provided by Frontend Mentor and developed by Adhyatma Dwivedi.
 
 ## Acknowledgments
 
-Had help with chat gpt for some javascript methods for transfering data from one html page to other. Had some info from docs of css and bootstrap.
+Re-coded this project from scratch after a year of practice. Definitely felt confident than last year in terms of binding everything together in a structured and optimized way.
