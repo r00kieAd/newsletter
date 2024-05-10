@@ -1,7 +1,7 @@
 $('#emailSubmit').click(function () {
     const input = ($('#emailInput').val()).toString() ? ($('#emailInput').val()).toString() : false;
     if (displayError(input)) {
-        if (/[a-zA-Z]+[0-9]?@+/.test(input)) {
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input)) {
             localStorage.setItem('email', input);
             $('.loaderDiv').css('opacity', 1);
             setTimeout(()=>{
