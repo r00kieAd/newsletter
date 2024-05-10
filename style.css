@@ -1,200 +1,315 @@
-.main {
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-    top: none;
-    left: none;
-    transform: none;
-    padding: none;
+:root {
+  --normal-input-border: hsl(231, 7%, 60%);
+  --normal-input-bg: transparent;
+  --normal-input-color: hsl(234, 29%, 20%);
+  --error-input-border: hsl(4, 100%, 67%);
+  --error-input-bg: #FCD2D1;
+  --error-input-color: hsl(4, 100%, 67%);
 }
 
-.svgImg {
-    position: relative;
-    visibility: visible;
-    width: 100%;
-    height: auto;
+@font-face {
+  font-family: "Roboto-regular";
+  src: url("assets/fonts/Roboto-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Roboto-bold";
+  src: url("assets/fonts/Roboto-Bold.ttf") format("ttf");
+}
+body {
+  background: hsl(235, 18%, 26%);
+  font-family: "Roboto-regular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
-.Dimg {
-    position: absolute;
-    visibility: hidden;
+#main {
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44rem;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 1rem;
 }
 
-.stayUpdated h1 {
-    font-weight: 700;
+.custCol {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  justify-content: space-between !important;
 }
 
-.stayUpdated p,
-.point p {
-    font-weight: 400;
-    font-size: 16px;
+#content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 19.8rem;
+  max-width: 19.8rem;
 }
 
-
-.stayUpdated {
-    padding: 20px;
+.loaderDiv {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 19.8rem;
+  transition: opacity 0.2s ease-in;
 }
 
-.features {
-    display: flex;
-    flex-direction: row;
+.loader {
+  width: 200px;
+  height: 200px;
 }
 
-.icon {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-right: 0.5rem;
+.mainHeading {
+  width: 100%;
+}
+
+.heading {
+  font-family: "Roboto-bold", sans-serif;
+  font-weight: 600;
+  color: hsl(235, 18%, 26%);
+  font-size: 43px;
+  margin-top: 5px;
+  margin-bottom: 14px;
+  word-spacing: 1px;
 }
 
 .points {
-    display: flex;
-    flex-direction: column;
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 25px;
 }
 
-.inputEmail {
-    width: 100px;
-    border-color: hsl(231, 7%, 60%) !important;
-    box-shadow: none !important;
+.points li {
+  padding-left: 1.8rem;
+  background-image: url(images/icon-list.svg);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 0 50%;
 }
 
-.inputEmailII {
-    width: 100px;
-    border-color: black !important;
-    box-shadow: none !important;
+.contactInfo .labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.contactInfo .labels .mainLabel,
+.contactInfo .labels .errorLabel {
+  font-family: "Roboto-bold", sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: hsl(234, 29%, 20%);
+}
+.contactInfo .labels .errorLabel {
+  color: hsl(4, 100%, 67%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+.contactInfo input,
+.contactInfo button {
+  width: 100%;
+  height: 40px;
+  line-height: 30px;
+  padding: 10px;
+  font-family: "Roboto-regular", sans-serif;
+  font-size: 12.5px;
+  outline: none;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 5px;
+  color: hsl(234, 29%, 20%);
+}
+.contactInfo input {
+  transition: border-color 0.2s ease-in, background 0.2s ease-in, color 0.2s ease-in;
+  margin-bottom: 5px;
+}
+.contactInfo input:focus {
+  outline: none;
+  border-color: hsl(234, 29%, 20%);
+  background-color: transparent;
+}
+.contactInfo button {
+  line-height: normal;
+  padding: 0;
+  font-weight: 500;
+  margin-top: 10px;
+  background: hsl(234, 29%, 20%);
+  color: white;
+  transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.contactInfo button:hover {
+  background: hsl(4, 100%, 67%);
+  color: white;
+  border-color: hsl(4, 100%, 67%);
+  box-shadow: 0 3px 10px hsl(4, 100%, 67%);
 }
 
-.inputEmailIII[type='email'] {
-    width: 100%;
-    border-color: red !important;
-    background-color: #F8C4B4 !important;
-    box-shadow: none !important;
-    color: hsl(4, 100%, 67%);
+#logoDiv {
+  position: relative !important;
+  max-width: 17.6rem !important;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 
-.errorMsg {
+.mobile {
+  display: none;
+}
+
+.logo {
+  width: 17.6rem;
+  height: auto;
+  border-radius: 20px;
+}
+
+#successMain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 19rem;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background: white;
+  padding: 1rem;
+}
+
+.successDiv .tick {
+  width: 40px !important;
+  height: 40px !important;
+}
+.successDiv h1 {
+  font-size: 39px;
+  font-family: "Roboto-bold", sans-serif;
+  font-weight: 600;
+}
+.successDiv p {
+  font-size: 14px;
+  font-family: "Roboto-regular", sans-serif;
+}
+.successDiv button {
+  width: 100%;
+  height: 40px;
+  line-height: 30px;
+  padding: 10px;
+  font-family: "Roboto-regular", sans-serif;
+  font-size: 12.5px;
+  outline: none;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 5px;
+  color: hsl(234, 29%, 20%);
+  cursor: pointer;
+}
+.successDiv button {
+  line-height: normal;
+  padding: 0;
+  font-weight: 500;
+  margin-top: 10px;
+  background: hsl(234, 29%, 20%);
+  color: white;
+  transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.successDiv button:hover {
+  background: hsl(4, 100%, 67%);
+  color: white;
+  border-color: hsl(4, 100%, 67%);
+  box-shadow: 0 3px 10px hsl(4, 100%, 67%);
+}
+
+@media screen and (max-width: 770px) {
+  body {
+    background: none;
+  }
+  #main {
+    background: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .contentCol {
+    order: 2;
+  }
+  .logoCol {
+    position: relative;
+    order: 1;
+  }
+  .container {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .row {
+    flex-direction: column !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    min-width: 100% !important;
+  }
+  #content {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: inherit;
+    max-width: inherit;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
     display: block;
-    float: right;
-    color: red;
-    font-size: 10px;
-    margin: 2px 2px 0 0;
-    visibility: hidden;
-}
-
-.subscribe {
-    padding: 0px 25px;
-}
-
-.butt {
-    text-align: center;
-}
-
-.butt button {
-    background-color: hsl(234, 29%, 20%);
+  }
+  #logoDiv {
+    position: relative !important;
+    max-width: 100vw !important;
+    max-height: auto !important;
+  }
+  .logo {
+    width: inherit;
+    height: auto;
+    border-radius: 0;
+  }
+  .logo img {
+    position: relative;
     width: 100%;
-    font-size: 15px;
-    color: white;
-    padding: 7px 50px;
-    border-radius: 7px;
-}
-
-@media screen and (min-width: 500px) {
-
-    body {
-        background-color: hsl(234, 29%, 20%) !important;
-        position: relative;
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    .main {
-        display: flex;
-        flex-wrap: nowrap;
-        width: fit-content;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    .svgImg {
-        position: fixed;
-        visibility: hidden;
-    }
-
-    .Dimg {
-        position: relative;
-        visibility: visible;
-    }
-
-    .main {
-        width: 55%;
-        background-color: white;
-        border: 1px solid black;
-        border-radius: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 1%;
-        display: flex;
-        flex-direction: row-reverse;
-    }
-
-    .mainheader {
-        position: relative;
-        display: inline;
-        float: right;
-    }
-
-    .stayUpdated h1 {
-        color: hsl(234, 29%, 20%);
-        font-size: 3rem;
-        padding: 10px 0;
-    }
-
-    .desktop-view {
-        margin-top: 8%;
-        margin-right: 3%;
-        position: relative;
-        display: inline;
-        float: left;
-    }
-
-    .subscribe {
-        padding: 0px 25px;
-    }
-
-    .inputEmail {
-        width: 100%;
-        height: 3rem;
-        border-color: hsl(231, 7%, 60%) !important;
-        box-shadow: none !important;
-    }
-
-    .inputEmailII {
-        height: 3rem;
-    }
-
-    .inputEmailIII[type='email'] {
-        height: 3rem;
-    }
-
-    .errorMsg {
-        font-size: 12px;
-    }
-
-    .butt button {
-        height: 3rem !important;
-        text-align: center;
-    }
-}
-
-@media screen and (min-width: 1550px) {
-    .main {
-        width: 50%;
-    }
-}
-
-@media screen and (min-width: 500px) and (max-width: 1665px) {
-    .butt button {
-        font-size: small;
-        padding: 10px;
-    }
-}
+    height: auto;
+    border-radius: 0;
+  }
+  #successMain {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: auto;
+    max-height: 100vh;
+    border: none;
+    border-radius: 0;
+    overflow-x: hidden;
+  }
+  .successDiv {
+    position: relative;
+    width: inherit;
+    height: 100vh;
+  }
+  .successDiv img {
+    margin-top: 10vh;
+  }
+  .successDiv button {
+    position: absolute;
+    width: 100%;
+    top: 80vh;
+  }
+}/*# sourceMappingURL=style.css.map */

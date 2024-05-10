@@ -1,6 +1,6 @@
-# Frontend Mentor - Newsletter sign-up form with success message solution
+# Frontend Mentor - Newsletter sign-up form with success message
 
-This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Newsletter sign-up form with success message](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv) challenge from Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -18,15 +18,17 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 Newsletter webpage template where using enter a valid email and get a subsribtion success message. Users will be able to get different screens for mobile and desktop.
 This project was provided by Frontend Mentor and developed by Adhyatma Dwivedi.
 
-### Screenshot
+<strong>Re-coded from scrath to improve the structure and optimize the code.</strong>
 
-![Desktop Homepage](images/desktopHomepage.png)
+### Screenshots
 
-![Mobile Homepage](images/mobileHomepage.png)
+![Desktop Homepage](images/screenshots/desktop-sign-up.png)
 
-![Desktop Success](images/DesktopSuccess.png)
+![Mobile Homepage](images/screenshots/mobile-sign-up.png)
 
-![Mobile Success](images/mobileSuccess.png)
+![Desktop Success](images/screenshots/desktop-success.png)
+
+![Mobile Success](images/screenshots/mobile-success.png)
 
 
 ### Links
@@ -39,8 +41,9 @@ This project was provided by Frontend Mentor and developed by Adhyatma Dwivedi.
 
 - HTML5
 - CSS
+- SASS
+- JQuery
 - Bootstrap
-- Mobile-first workflow
 - Javascript
 
 ### Useful resources
@@ -55,4 +58,6 @@ This project was provided by Frontend Mentor and developed by Adhyatma Dwivedi.
 
 ## Acknowledgments
 
-Had help with chat gpt for some javascript methods for transfering data from one html page to other. Had some info from docs of css and bootstrap.
+When tried first, which was almost a year ago, had lot of difficulties maintaining the design given by frontend mentor. With the help of references and retires, was able to complete the project.
+
+Re-coded this project from scratch after a year of practice. Definitely felt confident than last year in terms of binding everything together in a structured and optimized way. Major change is the use of sass and jquery.

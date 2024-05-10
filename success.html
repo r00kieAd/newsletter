@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="successMain">
+        <div class="successDiv">
+            <img class="tick image-fluid" src="images/icon-success.svg" alt="">
+            <h1>Thanks for subscribing!</h1>
+            <p>A confirmation email has been sent to <strong><span class="email">email</span></strong>. Please open it
+                and click the button inside to to confirm your subscription.</p>
+            <button type="submit">Dismiss message</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.email').text(localStorage.getItem('email'));
+        });
+        $('.successDiv > button').click(function () {
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+
+</html>
