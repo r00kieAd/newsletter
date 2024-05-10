@@ -1,3 +1,12 @@
+:root {
+  --normal-input-border: hsl(231, 7%, 60%);
+  --normal-input-bg: transparent;
+  --normal-input-color: hsl(234, 29%, 20%);
+  --error-input-border: hsl(4, 100%, 67%);
+  --error-input-bg: #FCD2D1;
+  --error-input-color: hsl(4, 100%, 67%);
+}
+
 @font-face {
   font-family: "Roboto-regular";
   src: url("assets/fonts/Roboto-Regular.ttf") format("ttf");
@@ -40,6 +49,21 @@ body {
   transform: translate(-50%, -50%);
   width: 19.8rem;
   max-width: 19.8rem;
+}
+
+.loaderDiv {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  max-width: 19.8rem;
+  transition: opacity 0.2s ease-in;
+}
+
+.loader {
+  width: 200px;
+  height: 200px;
 }
 
 .mainHeading {
@@ -97,17 +121,18 @@ body {
   font-family: "Roboto-regular", sans-serif;
   font-size: 12.5px;
   outline: none;
-  border: 0.5px solid hsl(231, 7%, 60%);
+  border: 1px solid hsl(231, 7%, 60%);
   border-radius: 5px;
   color: hsl(234, 29%, 20%);
 }
 .contactInfo input {
-  transition: border-color 0.2s ease-in, background 0.2s ease-in;
+  transition: border-color 0.2s ease-in, background 0.2s ease-in, color 0.2s ease-in;
   margin-bottom: 5px;
 }
 .contactInfo input:focus {
   outline: none;
   border-color: hsl(234, 29%, 20%);
+  background-color: transparent;
 }
 .contactInfo button {
   line-height: normal;
@@ -136,4 +161,59 @@ body {
   width: 17.6rem;
   height: auto;
   border-radius: 20px;
+}
+
+#successMain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 19rem;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background: white;
+  padding: 1rem;
+}
+
+.successDiv .tick {
+  width: 40px !important;
+  height: 40px !important;
+}
+.successDiv h1 {
+  font-size: 39px;
+  font-family: "Roboto-bold", sans-serif;
+  font-weight: 600;
+}
+.successDiv p {
+  font-size: 14px;
+  font-family: "Roboto-regular", sans-serif;
+}
+.successDiv button {
+  width: 100%;
+  height: 40px;
+  line-height: 30px;
+  padding: 10px;
+  font-family: "Roboto-regular", sans-serif;
+  font-size: 12.5px;
+  outline: none;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 5px;
+  color: hsl(234, 29%, 20%);
+  cursor: pointer;
+}
+.successDiv button {
+  line-height: normal;
+  padding: 0;
+  font-weight: 500;
+  margin-top: 10px;
+  background: hsl(234, 29%, 20%);
+  color: white;
+  transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.successDiv button:hover {
+  background: hsl(4, 100%, 67%);
+  color: white;
+  border-color: hsl(4, 100%, 67%);
+  box-shadow: 0 3px 10px hsl(4, 100%, 67%);
 }/*# sourceMappingURL=style.css.map */

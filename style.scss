@@ -2,12 +2,22 @@ $darkSlateGrey: hsl(234, 29%, 20%);
 $charcoalGrey: hsl(235, 18%, 26%);
 $grey: hsl(231, 7%, 60%);
 $tomato: hsl(4, 100%, 67%);
+$errorRed: #FCD2D1;
 $baseFontSize: clamp(10px, 14px, 18px);
 $mainDivWidth: 44rem;
 $mainDivHeight: auto;
 $contentDivWidth: calc($mainDivWidth - calc($mainDivWidth * 0.55));
 $logoDivWidth: calc($mainDivWidth - calc($mainDivWidth * 0.60));
 $baseBorderRadius: 20px;
+
+:root {
+    --normal-input-border: #{$grey};
+    --normal-input-bg: transparent;
+    --normal-input-color: #{$darkSlateGrey};
+    --error-input-border: #{$tomato};
+    --error-input-bg: #{$errorRed};
+    --error-input-color: #{$tomato};
+}
 
 @font-face {
     font-family: 'Roboto-regular';
@@ -53,6 +63,21 @@ body {
     transform: translate(-50%, -50%);
     width: $contentDivWidth;
     max-width: $contentDivWidth;
+}
+
+.loaderDiv {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    max-width: $contentDivWidth;
+    transition: opacity .2s ease-in;
+}
+
+.loader {
+    width: 200px;
+    height: 200px;
 }
 
 .mainHeading {
@@ -118,19 +143,20 @@ body {
         font-family: 'Roboto-regular', sans-serif;
         font-size: calc($baseFontSize - 1.5px);
         outline: none;
-        border: 0.5px solid $grey;
+        border: 1px solid $grey;
         border-radius: 5px;
         color: $darkSlateGrey;
     }
 
     input {
-        transition: border-color .2s ease-in, background .2s ease-in;
+        transition: border-color .2s ease-in, background .2s ease-in, color .2s ease-in;
         margin-bottom: 5px;
     }
 
     input:focus {
         outline: none;
         border-color: $darkSlateGrey;
+        background-color: transparent;
     }
 
     button {
@@ -161,4 +187,68 @@ body {
     width: $logoDivWidth;
     height: $mainDivHeight;
     border-radius: $baseBorderRadius;
+}
+
+#successMain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc($mainDivWidth - 25rem);
+    height: auto;
+    border: 1px solid transparent;
+    border-radius: $baseBorderRadius;
+    background: white;
+    padding: 1rem;
+}
+
+.successDiv {
+
+    .tick {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    h1 {
+        font-size: calc($baseFontSize + 25px);
+        font-family: 'Roboto-bold', sans-serif;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: $baseFontSize;
+        font-family: 'Roboto-regular', sans-serif;
+    }
+
+    button {
+        width: 100%;
+        height: 40px;
+        line-height: 30px;
+        padding: 10px;
+        font-family: 'Roboto-regular', sans-serif;
+        font-size: calc($baseFontSize - 1.5px);
+        outline: none;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        color: $darkSlateGrey;
+        cursor: pointer;
+    }
+
+    button {
+        line-height: normal;
+        padding: 0;
+        font-weight: 500;
+        margin-top: 10px;
+        background: $darkSlateGrey;
+        color: white;
+        transition: background .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+    }
+
+    button:hover {
+        background: $tomato;
+        color: white;
+        border-color: $tomato;
+        box-shadow: 0 3px 10px $tomato;
+    }
+
 }
