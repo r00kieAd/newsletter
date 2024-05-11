@@ -22,18 +22,18 @@ $baseBorderRadius: 20px;
 }
 
 @font-face {
-    font-family: 'Roboto-regular';
+    font-family: Roboto-regular;
     src: url('assets/fonts/Roboto-Regular.ttf') format('ttf');
 }
 
 @font-face {
-    font-family: 'Roboto-bold';
+    font-family: Roboto-bold;
     src: url('assets/fonts/Roboto-Bold.ttf') format('ttf');
 }
 
 body {
     background: $charcoalGrey;
-    font-family: 'Roboto-regular', sans-serif;
+    font-family: Roboto-regular, sans-serif;
     font-size: $baseFontSize;
     font-weight: 400;
 }
@@ -87,7 +87,7 @@ body {
 }
 
 .heading {
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: Roboto-bold, sans-serif;
     font-weight: 600;
     color: $charcoalGrey;
     font-size: calc($baseFontSize + 29px);
@@ -123,7 +123,7 @@ body {
 
         .mainLabel,
         .errorLabel {
-            font-family: 'Roboto-bold', sans-serif;
+            font-family: Roboto-bold, sans-serif;
             font-weight: 600;
             font-size: calc($baseFontSize - 4px);
             color: $darkSlateGrey;
@@ -142,7 +142,7 @@ body {
         height: 40px;
         line-height: 30px;
         padding: 10px;
-        font-family: 'Roboto-regular', sans-serif;
+        font-family: Roboto-regular, sans-serif;
         font-size: calc($baseFontSize - 1.5px);
         outline: none;
         border: 1px solid $grey;
@@ -231,7 +231,7 @@ body {
         height: 40px;
         line-height: 30px;
         padding: 10px;
-        font-family: 'Roboto-regular', sans-serif;
+        font-family: Roboto-regular, sans-serif;
         font-size: calc($baseFontSize - 1.5px);
         outline: none;
         border: 1px solid $grey;
